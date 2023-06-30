@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    display: flex;
+    height: 225px;
+    /* min-height: 40%; */
+    width: 500px;
+    /* max-width: 60%; */
+    border: 2px solid #bcf84e;
+    border-radius: 15px;
+    background-color: #01101f;
+    box-shadow: 4px 6px 5px 2px gray;
+}
+
+.item1{
+    grid-area: teamName;
+}
+
+.item2{
+    grid-area: addButton;
+}
+
+.item3{
+    grid-area: displayScore;
+}
+
+.item4{
+    grid-area: penaltyPoints;
+}
+
+.item5{
+    grid-area: bonusPoints;
+}
+
+.partition{
+    width: 1%;
+    background-color: #bcf84e;
+}
+.scores{
+    color: azure;
+    display: grid;
+    grid-template-areas: 
+    'teamName teamName teamName teamName teamName'
+    '. displayScore displayScore displayScore .'
+    'addButton displayScore displayScore displayScore penaltyPoints'
+    '. displayScore displayScore displayScore .'
+    'bonusPoints bonusPoints bonusPoints bonusPoints bonusPoints';
+    text-align: center;
+    height: 100%;
+    width: 49.5%;
+}
+
+.score-buttons{
+    margin:5px;
+    background-color: #53b801;
+    display: flex;
+    border: 1px solid skyblue;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.display-score{
+    font-size: 2em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fd2104;
+    height: 100%;
+    width: 100%;
+    border: 4px dashed rgb(52, 53, 2);
+}
+
+.bonus-points{
+    background-color: #046d4a;
+    margin: 15px auto;
+    width: 7rem;
+    border: 1px solid rgb(4, 153, 49);
+}
+
+.score-buttons, .bonus-points{
+    cursor: pointer;
+}
